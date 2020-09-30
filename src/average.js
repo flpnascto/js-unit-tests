@@ -13,18 +13,18 @@
 */
 
 const average = (numbers) => {
-  if (numbers.length == 0) {
+  if (numbers.length === 0) {
     return undefined;
   }
-  let totalNumbers = numbers.length;
+  const totalNumbers = numbers.length;
   let numberAvarage = 0;
   for (let index = 0; index < totalNumbers; index += 1) {
-    if (typeof numbers[index] !== 'number'){
+    if (typeof numbers[index] !== 'number') {
       return undefined;
     }
-    numberAvarage += numbers[index]; 
+    numberAvarage += numbers[index];
   }
-  return Math.round(numberAvarage/totalNumbers);
+  return Math.round(numberAvarage / totalNumbers);
 };
 
 module.exports = average;
