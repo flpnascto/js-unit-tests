@@ -127,6 +127,14 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
+    const meuRestaurante = createMenu({
+      food: {'coxinha': 3.90, 'sanduiche': 9.90},
+      drinks: {'agua': 3.90, 'cerveja': 6.90}
+    });
+    meuRestaurante.order('coxinha');
+    meuRestaurante.order('agua');
+    meuRestaurante.order('coxinha');
+    assert.deepStrictEqual(meuRestaurante.pay, 11.70)
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
