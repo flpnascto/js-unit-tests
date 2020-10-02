@@ -134,7 +134,7 @@ describe('#createMenu', () => {
     meuRestaurante.order('coxinha');
     meuRestaurante.order('agua');
     meuRestaurante.order('coxinha');
-    assert.deepStrictEqual(meuRestaurante.pay, 11.70)
+    assert.deepStrictEqual(meuRestaurante.pay(), 12.87)
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });
